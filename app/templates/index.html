@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<section class="hero">
+  <h1>Recupere sua <span class="destaque">Autonomia</span></h1>
+  <p class="intro">
+    Termos de uso são desenhados para você não ler. Nós ajudamos você a enxergar
+    as armadilhas de vigilância e exploração.
+  </p>
+</section>
+
+<section class="ferramenta" aria-label="Decodificador de Texto">
+  <div class="input-area">
+    <label for="inputTexto" class="sr-only">Cole os termos de uso aqui</label>
+    <textarea
+      id="inputTexto"
+      placeholder="Cole aqui o trecho do contrato ou termo de uso... Ex: 'Nossos parceiros utilizam dados para melhorar sua experiência'"
+    ></textarea>
+
+    <div class="botoes">
+      <button onclick="decodificar()" class="btn-primary">
+        🔍 Decodificar Vigilância
+      </button>
+      <button onclick="limpar()" class="btn-secondary">Limpar</button>
+    </div>
+  </div>
+
+  <div id="resultado" class="output-area" aria-live="polite">
+    <p class="placeholder-text">O texto decodificado aparecerá aqui...</p>
+  </div>
+</section>
+
+<section id="sobre" class="info-extra">
+  <h2>Por que isso existe?</h2>
+  <p>
+    Empresas usam eufemismos para esconder práticas abusivas. Este projeto visa
+    educar e criar consciência de classe sobre nossos dados digitais.
+  </p>
+</section>
+{% endblock %}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      {% block title %}Decodificador Popular{% endblock %} | Soberania Digital
+    </title>
+    <meta
+      name="description"
+      content="Ferramenta de autodefesa digital que traduz os termos de uso abusivos das Big Techs para a linguagem da classe trabalhadora."
+    />
+    <meta
+      name="keywords"
+      content="soberania digital, termos de uso, privacidade, hackathon, cpdd"
+    />
+
+    <meta
+      property="og:title"
+      content="Decodificador Popular de Termos de Uso"
+    />
+    <meta
+      property="og:description"
+      content="Não aceite o que você não entende. Decodifique a vigilância corporativa agora."
+    />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav>
+        <div class="logo">✊ Decodificador Popular</div>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre o Projeto</a></li>
+          <li>
+            <a
+              href="https://github.com/bruclares/decodificador-popular"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Código Aberto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">{% block content %}{% endblock %}</main>
+
+    <footer class="site-footer">
+      <p>Construído para o <strong>Hackathon Soberania Digital</strong>.</p>
+      <p>Tecnologia a serviço da classe trabalhadora. ☭</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
