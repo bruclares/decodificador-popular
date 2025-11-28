@@ -24,7 +24,8 @@ def create_app():
   migrate.init_app(app, db)
 
   # importa e registra as rotas
-  from app.routes import main
-  app.register_blueprint(main)
+  from app.controllers import main_bp, termos_bp
+  app.register_blueprint(main_bp)
+  app.register_blueprint(termos_bp, url_prefix="/api/termos")
 
   return app
