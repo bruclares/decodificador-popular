@@ -136,7 +136,6 @@ button {
     min-height: 100px;
     white-space: pre-wrap;
     position: relative;
-    overflow: hidden;
 }
 
 .output-area::before {
@@ -177,7 +176,7 @@ button {
     border-radius: 8px;
     font-size: 0.85rem;
     box-shadow: 0 5px 20px rgba(0,0,0,0.8);
-    z-index: 100;
+    z-index: 9999;
     pointer-events: none;
     line-height: 1.4;
 }
@@ -191,7 +190,7 @@ button {
     border-width: 8px;
     border-style: solid;
     border-color: var(--danger) transparent transparent transparent;
-    z-index: 100;
+    z-index: 9999;
 }
 
 .site-footer { 
